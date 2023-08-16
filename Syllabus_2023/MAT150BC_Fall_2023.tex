@@ -1,0 +1,200 @@
+% 1. EDIT COURSE SPECIFIC PARAMETERS (these)
+\def \instructor{arciero}
+\def \coursenum{150 B,C}
+\def \coursename{Statistics for Life Sciences}
+
+
+
+
+\def \callnumber{}  % and   20225
+\def \year{2023}
+\def \room{}
+\def \daytime{}
+
+
+
+\def \prerequisite{LAC 022 or SAS 022 or UL4 mathematics placement}
+\def \website{Brightspace \url{https://brightspace.une.edu/d2l/home/59742}}
+
+\newif\ifquiz
+\quizfalse
+
+
+\newif\ifpart
+\partfalse
+
+
+\newif\ifhw
+\hwtrue
+
+
+
+% 2. EDIT (IF CHANGES) GLOBAL INCLUDE FILES (e.g., academic integrity)
+%\newcommand{\globalpath}{global_inc}  % path to global folder
+
+\documentclass[12pt]{files/handoutX}
+
+
+% --------------- RUN -------------- %
+
+
+
+
+\input{files/preamble}
+
+
+
+
+
+%\title{\includegraphics[scale=0.6]{\globalpath/UNE_logo}}
+\title{Statistics for Life Sciences}
+% header information
+\author{Fall \year}
+\course{MAT\coursenum}
+\date{\bf  }
+
+%\usepackage[T1]{fontenc}
+%\usepackage{lmodern}
+%\usepackage{hyperref}
+%\usepackage{nopageno}
+%\usepackage{multicol}
+%\geometry{margin=1cm}
+
+
+%\newcommand{\peem}{\textsc{p.m.}}
+%\newcommand{\ayem}{\textsc{a.m.}}
+
+%\titlespacing*{\section}{0in}{*0}{*1}
+%\titlespacing*{\subsection}{0in}{*0}{*1}
+
+
+\usepackage{tabularx}
+\usepackage{rotating}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0.0in}
+\usepackage{calc}
+
+
+
+
+
+\begin{document}
+\maketitle
+
+
+
+\subsection*{Course Information}
+%\vspace{1ex}%
+\noindent\parbox{0.5\textwidth}{%
+	\noindent\begin{tabular}{@{}ll}
+		\input{files/course_info}
+\end{tabular}}
+
+
+\subsection*{Instructor Information}
+%\vspace{1ex}%
+\noindent\parbox{0.5\textwidth}{%
+	\noindent\begin{tabular}{@{}ll}
+		\input{files/\instructor}
+\end{tabular}}
+
+\subsection*{Course description}
+\input{files/description}
+
+\subsection*{Learning outcomes}
+
+\input{files/learningoutcomes}
+
+
+\subsection*{Course in the Curriculum}
+\input{files/course-n-curriculum}
+
+
+%\subsection*{Asynchronous format}
+%\input{files/asynch}
+
+\subsection*{Brightspace}
+\input{files/brightspace}
+
+\subsection*{Computational tools}
+\input{files/comptools}
+
+
+
+\subsection*{My Open Math}
+\input{files/myopenmath}
+
+
+
+% --------- Course POLICIES ------------- %
+%\subsection*{Policies}
+
+%\newpage 
+
+%\subsection*{Grade Cutoff Values}
+%\input{\globalpath/grade_cutoffs}
+
+
+\ifhw
+\subsection*{Homework}
+\input{files/homework} 
+\fi
+
+\subsection*{R Labs}
+\input{files/Rlabs}
+
+\subsection*{Participation/Discussions}
+\input{files/discussion}
+
+\subsection*{Exams}
+\input{files/exams}
+
+\subsection*{Attendance}
+\input{files/attend}
+
+
+
+%\subsection*{Course Evaluation -- Grading}
+% \input{files/gradescheme}
+
+
+
+%\subsection*{Grade Cutoff Values}
+%\input{files/grade_cutoffs}
+
+
+\subsection*{Course evaluation-Grading} 
+\input{files/gradescheme}
+
+%\subsection*{Policies for academic integrity in programming courses}
+%In addition to the University policies on academic integrity, the following policies will apply for courses with substantial computer programming.
+%\input{files/policies}
+
+
+\newpage 
+
+\subsection*{Schedule of topics} 
+\input{files/topicsF2023}
+
+
+%\includepdf[pages=-]{calendarF2022.pdf}
+
+
+% \vspace{2ex}\hrule\vspace{3ex}
+
+
+%\input{calendarF2019_students.tex}
+
+%\subsection*{Course topics and schedule}
+%\input{files/topics}
+
+
+\includepdf[pages={1-3}]{Syllabus_boil.pdf}
+
+
+
+
+
+\end{document}
+
